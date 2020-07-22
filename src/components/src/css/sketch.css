@@ -1,17 +1,177 @@
-.tileDiv{
-    width: 30%;
-    height: 90px;
-    font-size: 60px;
-    border: 2px solid navy;
-    background-color: white;
-    color: black;
+.boardcontainer{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    width: 100%;
     align-items: center;
-
+}
+/* Drawing lines */
+.boardcontainer {
+  position: relative;
 }
 
-.tileDiv p{
-    margin: 0;
-    text-align: center;
+.boardcontainer::after {
+  content: '';
+  position: absolute;
+  background-color: red;
+  transition: 0.7s;
 }
+/* Horizontal line */
+.boardcontainer.h::after {
+  width: 0%;
+  height: 3px;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.boardcontainer.h.full::after {
+  width: 100%;
+}
+
+.boardcontainer.h0::after {
+  top: calc(100% / 6);
+}
+
+.boardcontainer.h1::after {
+  top: 50%;
+}
+
+.boardcontainer.h2::after {
+  top: calc(5 * 100% / 6);
+}
+
+/* Vertical Lines */
+
+.boardcontainer.v::after {
+  height: 0%;
+  width: 3px;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.boardcontainer.v.full::after {
+  height: 100%;
+}
+
+.boardcontainer.v0::after {
+  left: calc(100% /4);
+}
+
+.boardcontainer.v1::after {
+  left: 50%;
+}
+
+.boardcontainer.v2::after {
+  right: 88px;
+}
+
+/* Diagonal Lines */
+
+.boardcontainer.d0::after {
+  height: 0%;
+  width: 3px;
+  left: 45px;
+  top: 0;
+  transform: rotateZ(-45deg);
+  transform-origin: 50% 0;
+  transition: height 0.7s;
+}
+
+.boardcontainer.d0.full::after {
+  height: 140%;
+}
+
+.boardcontainer.d1::after {
+  height: 0%;
+  width: 3px;
+  right: 45px;
+  top: 0;
+  transform: rotateZ(45deg);
+  transform-origin: 50% 0;
+  transition: height 0.7s;
+}
+
+.boardcontainer.d1.full::after {
+  height: 140%;
+}
+
+.boardcontainer>.boardRow1>.cell.cell-0,
+.boardcontainer>.boardRow1>.cell.cell-1,
+.boardcontainer>.boardRow1>.cell.cell-2 {
+  border-top: none;
+}
+
+.boardcontainer>.boardRow1>.cell.cell-0,
+.boardcontainer>.boardRow2>.cell.cell-3,
+.boardcontainer>.boardRow3>.cell.cell-6 {
+  border-left: none;
+}
+
+.boardcontainer>.boardRow3>.cell.cell-6,
+.boardcontainer>.boardRow3>.cell.cell-7,
+.boardcontainer>.boardRow3>.cell.cell-8 {
+  border-bottom: none;
+}
+
+.boardcontainer>.boardRow1>.cell.cell-2,
+.boardcontainer>.boardRow2>.cell.cell-5,
+.boardcontainer>.boardRow3>.cell.cell-8 {
+  border-right: none;
+}
+
+.boardcontainer>.boardRow1>.cell {
+    flex: 1 1;
+    padding-top: calc(100% / 6 - 2.9rem);
+    padding-bottom: calc(100% / 6 - 2.9rem);
+    font-size: 90px;
+    line-height: 5.7rem;
+    color: navy;
+    width: 90px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid #fff;
+    margin-left: -2px;
+    margin-top: -2px;
+}
+.boardcontainer>.boardRow2>.cell {
+    flex: 1 1;
+    padding-top: calc(100% / 6 - 2.9rem);
+    padding-bottom: calc(100% / 6 - 2.9rem);
+    font-size: 90px;
+    width: 90px;
+    line-height: 5.7rem;
+    background-color: transparent;
+    color: navy;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border: 2px solid #fff;
+    margin-left: -2px;
+    margin-top: -2px;
+}
+.boardcontainer>.boardRow3>.cell {
+    flex: 1 1;
+    padding-top: calc(100% / 6 - 2.9rem);
+    padding-bottom: calc(100% / 6 - 2.9rem);
+    font-size: 90px;
+    width: 90px;
+    line-height: 5.7rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: navy;
+    outline: none;
+    border: 2px solid #fff;
+    margin-left: -2px;
+    margin-top: -2px;
+}
+.boardcontainer>.boardRow1>.cell.done {
+    color: #fff;
+}
+.boardcontainer>.boardRow2>.cell.done {
+    color: #fff;
+}
+.boardcontainer>.boardRow3>.cell.done {
+    color: #fff;
+  }
