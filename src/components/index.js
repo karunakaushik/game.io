@@ -104,6 +104,7 @@ class MainPage extends Component {
     
     return (
       <div className="container">
+        
       <div className="headerDiv">
         <h1>Tic Tac Toe</h1>
         
