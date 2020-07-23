@@ -42,13 +42,12 @@ class MainPage extends Component {
         return{
           // count : state.count === 10 ? state.count++ : "TimeOut",
           count : state.count === 10 ? "TimeOut" :state.count+ 1
-
         }
       })
       
     }, 1000);
-
   }
+
   
 
   render() {
@@ -101,7 +100,6 @@ class MainPage extends Component {
 
 
    
-  console.log(this.state.count);
 
     
     return (
