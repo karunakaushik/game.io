@@ -37,11 +37,13 @@ class MainPage extends Component {
   }
 
   componentDidMount() {
-    setInterval(() => {
+    this.timer= setInterval(() => {
       return this.setState(( state, props) => {
+        if(state.count == 10)  clearInterval(this.timer);
         return{
           // count : state.count === 10 ? state.count++ : "TimeOut",
           count : state.count === 10 ? "TimeOut" :state.count+ 1
+
         }
       })
       
@@ -77,31 +79,6 @@ class MainPage extends Component {
     }
     
    
-    // var timerset = document.getElementsByClassName("newgameTButton");
-  
-    // function Display() {
-//     setInterval(myTimer, 1000);
-//     var count = 0;
-//     function myTimer() {  
-//       if(count !== 9) count++;
-//       else{
-//         count = 0;
-//         textInfo = 'Timeout';
-//         console.log("TimeOut")
-//         // this.context.newGame();
-//       }
-//       document.getElementById("timer").innerHTML = "CountDown: "+ count;
-//  }    
-//     // }
-
-    // for (var i = 0; i < timerset.length; i++){
-      // timerset.addEventListener("click", Display);
-    // }
-
-
-   
-
-    
     return (
       <div className="container">
         
@@ -131,7 +108,7 @@ class MainPage extends Component {
                   </div>
                   <br/>
                   <div className="newgameTButton">
-                    <button onClick={() => {this.context.newGame(); this.resetTime()}}>New Game with Timer</button>
+                    <button onClick={() => {this.context.newGame(); this.resetTime(); this.componentDidMount()}}>New Game with Timer</button>
                     <p id = "timer"> {this.state.count}  </p>
                   </div>
                   <div className="info">{textInfo}</div>
