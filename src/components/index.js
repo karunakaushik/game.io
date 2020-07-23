@@ -37,16 +37,25 @@ class MainPage extends Component {
   }
 
   componentDidMount() {
-    setInterval(() => {
+//     setInterval(() => {
+//       return this.setState(( state, props) => {
+//         return{
+//           // count : state.count === 10 ? state.count++ : "TimeOut",
+//           count : state.count === 10 ? "TimeOut" :state.count+ 1
+
+//         }
+//       })
+      
+//     }, 1000);
+      var id = setInterval(frame, 1000);
+      function frame() {
       return this.setState(( state, props) => {
+          if(state.count == 10)  clearInterval(id);
         return{
           // count : state.count === 10 ? state.count++ : "TimeOut",
           count : state.count === 10 ? "TimeOut" :state.count+ 1
-
         }
-      })
-      
-    }, 1000);
+      }
 
   }
   
