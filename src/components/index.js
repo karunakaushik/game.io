@@ -6,7 +6,9 @@ import Human from './src/img/human.svg'
 import './src/css/main.css'
 import './src/css/normal.css'
 import Board from './sketch';
-import Hints from './hints';
+// import Hints from './hints';
+import Hints1 from './hints1';
+import Inst from './instruction';
 
 
 const GameType = (props) => {
@@ -85,7 +87,10 @@ class MainPage extends Component {
         
          <div className="playersDiv"> 
                 <div className="playersBox">
-                     <Hints />
+                     {/* <Hints /> */}
+                     <div className="hintandinst">
+                       <Hints1 />
+                      <Inst /> </div>
                     <div className="playerinnerBox">
                         <div className="humanplayers">
                             <img src={Human} alt="Human" />

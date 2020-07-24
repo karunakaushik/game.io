@@ -1,6 +1,14 @@
 import React, { Component } from 'react'
 import './src/css/hints.css'
 export default class Hints extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            open:false,
+        //   open1: false,
+        //   open2:false
+        }
+      }
     render() {
         return(
             <div className="hintscontainer">
@@ -117,9 +125,9 @@ export default class Hints extends Component{
             </li>
         </ul>
     </li>
-    <li>
-        <a href="#">INSTRUCTIONS</a>
-        <ul class="infifth-level-menu">
+    <div onClick={function(){this.setState({open1:!this.state.open1})}.bind(this)}>
+        <div>INSTRUCTIONS</div>
+        <ul className={this.state.open1? "panel-collapse": "panel-collapse panel-close"}>
             <li>
                 <a href="#">If you are X, your opponent is O. Players take turns putting their marks in empty squares.</a>
             </li>
@@ -130,7 +138,7 @@ export default class Hints extends Component{
                 <a href="#">When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.</a>
             </li>
         </ul>
-    </li>
+    </div>
 </ul>
 </div>
         )
