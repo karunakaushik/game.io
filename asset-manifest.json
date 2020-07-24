@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/game.io/static/css/main.32d81bec.chunk.css",
+    "main.css": "/game.io/static/css/main.8e2f8ae4.chunk.css",
     "main.js": "/game.io/static/js/main.cbc8f77e.chunk.js",
     "main.js.map": "/game.io/static/js/main.cbc8f77e.chunk.js.map",
     "runtime-main.js": "/game.io/static/js/runtime-main.4c16fae4.js",
@@ -8,9 +8,9 @@
     "static/js/2.a4825a72.chunk.js": "/game.io/static/js/2.a4825a72.chunk.js",
     "static/js/2.a4825a72.chunk.js.map": "/game.io/static/js/2.a4825a72.chunk.js.map",
     "index.html": "/game.io/index.html",
-    "precache-manifest.be60e83a61282c05fadc5d6485b9999c.js": "/game.io/precache-manifest.be60e83a61282c05fadc5d6485b9999c.js",
+    "precache-manifest.248dc670980bd715cbbe9f90b1411331.js": "/game.io/precache-manifest.248dc670980bd715cbbe9f90b1411331.js",
     "service-worker.js": "/game.io/service-worker.js",
-    "static/css/main.32d81bec.chunk.css.map": "/game.io/static/css/main.32d81bec.chunk.css.map",
+    "static/css/main.8e2f8ae4.chunk.css.map": "/game.io/static/css/main.8e2f8ae4.chunk.css.map",
     "static/js/2.a4825a72.chunk.js.LICENSE.txt": "/game.io/static/js/2.a4825a72.chunk.js.LICENSE.txt",
     "static/media/human.svg": "/game.io/static/media/human.855fb65c.svg",
     "static/media/robot.svg": "/game.io/static/media/robot.04f4be75.svg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.4c16fae4.js",
     "static/js/2.a4825a72.chunk.js",
-    "static/css/main.32d81bec.chunk.css",
+    "static/css/main.8e2f8ae4.chunk.css",
     "static/js/main.cbc8f77e.chunk.js"
   ]
 }
