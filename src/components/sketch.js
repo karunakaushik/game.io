@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { AppContext } from './AppProvider';
 import {  ICONS_CHAR } from './minimax';
 import './src/css/sketch.css';
+import './src/css/normal.css'
 
 const ICON_PLACE_HOLDDER = 'I';
 
