@@ -129,6 +129,9 @@ export default class Hints extends Component{
         <div>INSTRUCTIONS</div>
         <ul className={this.state.open1? "panel-collapse": "panel-collapse panel-close"}>
             <li>
+                <a href="#">Click the New Game with Timer button only after the Timeout.</a>
+            </li>
+            <li>
                 <a href="#">If you are X, your opponent is O. Players take turns putting their marks in empty squares.</a>
             </li>
             <li>
