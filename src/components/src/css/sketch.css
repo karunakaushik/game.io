@@ -1,7 +1,7 @@
 .boardcontainer{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: max-content;
     align-items: center;
 }
 /* Drawing lines */

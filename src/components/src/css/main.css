@@ -125,6 +125,7 @@ a:active {
     }
     .playersDiv{
         flex-direction: column;
+        flex-wrap: wrap;
     }
     .playersBox{
         padding: 0;
@@ -156,6 +157,10 @@ a:active {
     }
     .container{
         height: fit-content;
+    }
+    .playersDiv{
+        flex-wrap: wrap;
+
     }
 }
 
