@@ -8,7 +8,7 @@ export default class Popup extends React.Component {
   super(props);
   this.state = {
   
-    popupHeader:"Looks like you don't have an account"
+    popupHeader:" "
   };
 }
 
@@ -18,7 +18,7 @@ export default class Popup extends React.Component {
 render() {
   var headerStyle = {
     color:'white',
-    // fontWeight:'bold',
+    fontFamily:'Arail',
     fontSize: 20
   }
   return (
@@ -27,7 +27,7 @@ render() {
       <div className='popup_inner'>
      <div style={headerStyle}>
        <div>
-       <h4>First Player</h4>
+       <h4> First Player :</h4>
                 <li>
                     YOU CHOOSE CORNER
                     <ol>
@@ -64,11 +64,11 @@ render() {
                 <li>
                     YOU CHOOSE CENTER
                     <ol>
-                        Opponent chose edge
+                        1.Opponent chose edge
                         <ol>Select the corner farthest to tile opponent chose</ol>
                     </ol>
                     <ol>
-                        Opponent chose corner
+                        2.Opponent chose corner
                          <ol>Select the corner diagonal to the tile opponent chose.If the opponent chooses another corner, it will result in a TIE. If the opponent doesn't choose another corner, you could select one.</ol>    
                     </ol>
                 </li>
@@ -76,7 +76,7 @@ render() {
                     YOU CHOOSE EDGE
                     <ol>No strategies</ol>
                 </li>
-                <h4>Second Player</h4> 
+                <h4>Second Player : </h4> 
                     <li>
                       OPPONENT CHOOSE CORNER
                        <ol>Select center and obstruct winning chances of opponent</ol>

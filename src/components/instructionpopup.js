@@ -8,7 +8,7 @@ export default class Popup extends React.Component {
   super(props);
   this.state = {
   
-    popupHeader:"Looks like you don't have an account"
+    popupHeader:" "
   };
 }
 
@@ -18,7 +18,7 @@ export default class Popup extends React.Component {
 render() {
   var headerStyle = {
     color:'white',
-    // fontWeight:'bold',
+    fontFamily:'Arail',
     fontSize: 20
   }
   return (
@@ -27,7 +27,10 @@ render() {
       <div className='popup_inner'>
      <div style={headerStyle}>
        <div>
-       <h4>Instructions here: </h4>
+       <h4 style={{textAlign:"Center"}}>Instructions here: </h4>
+                 <li>
+                    Click the New Game with Timer button only after Timeout.
+                 </li>
                 <li>
                     If you are X, your opponent is O. Players take turns putting their marks in empty squares.
                 </li>
