@@ -15,8 +15,9 @@
     align-items: center;
 
 }
-.headerDiv h1{
+.headertext{
     font-size: 40px;
+    
 }
 .playersDiv{
     display: flex;
@@ -120,7 +121,7 @@ a:active {
         flex-direction: column;
         height: fit-content;
         align-items: center;
-        padding: 10px 20px;
+        /* padding: 10px 20px; */
     }
     .playersDiv{
         flex-direction: column;

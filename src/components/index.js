@@ -41,7 +41,6 @@ class MainPage extends Component {
       return this.setState(( state, props) => {
         if(state.count == 10)  clearInterval(this.timer);
         return{
-          // count : state.count === 10 ? state.count++ : "TimeOut",
           count : state.count === 10 ? "TimeOut" :state.count+ 1
 
         }
@@ -53,8 +52,6 @@ class MainPage extends Component {
   
 
   render() {
-    // var ScorePlayer1 = 0;
-    // var ScorePlayer2 = 0;
     let textInfo = '';
     const currentIconType = this.context.currentIcon;
 
@@ -83,7 +80,7 @@ class MainPage extends Component {
       <div className="container">
         
       <div className="headerDiv">
-        <h1>Tic Tac Toe</h1>
+        <h1 class = "headertext">Tic Tac Toe</h1>
         
          <div className="playersDiv"> 
                 <div className="playersBox">
